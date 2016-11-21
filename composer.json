@@ -6,7 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*"
+        "laravel/framework": "5.2.*",
+        "barryvdh/laravel-cors": "^0.8.2",
+        "unlu/laravel-api-query-builder": "^1.4",
+        "watson/validating": "2.2.2",
+        "sorskod/larasponse": "dev-L5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -156,6 +156,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Optional Service Providers...
+         */
+        Barryvdh\Cors\ServiceProvider::class,
+        Unlu\Laravel\Api\ApiQueryBuilderServiceProvider::class,
+        Sorskod\Larasponse\LarasponseServiceProvider::class,
     ],
 
     /*
