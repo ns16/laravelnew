@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('form', 'FormController@index');
+Route::get('form/index', 'FormController@index');
+Route::get('form/create', 'FormController@create');
+Route::post('form/create', 'FormController@createPost');
+Route::get('form/update/{id}', 'FormController@update');
+Route::post('form/update/{id}', 'FormController@updatePost');
+Route::get('form/delete/{id}', 'FormController@delete');
