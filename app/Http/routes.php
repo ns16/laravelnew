@@ -11,8 +11,10 @@
 |
 */
 
+Route::get('', 'FormController@index');
 Route::get('form', 'FormController@index');
 Route::get('form/index', 'FormController@index');
+Route::post('form/index', 'FormController@indexPost');
 Route::get('form/create', 'FormController@create');
 Route::post('form/create', 'FormController@createPost');
 Route::get('form/update/{id}', 'FormController@update');

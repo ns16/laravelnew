@@ -5,12 +5,23 @@ namespace App\Http\Controllers;
 use App\Form;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FormController extends Controller
 {
     public function index()
     {
         $forms = Form::paginate(5);
+        return view('form.index', ['forms' => $forms]);
+    }
+
+    public function indexPost(Request $request)
+    {
+        $forms = DB::table('forms')
+            ->where('title', 'like', '%'.$request->title.'%')
+            ->where('body', 'like', '%'.$request->body.'%')
+            ->paginate(5);
+
         return view('form.index', ['forms' => $forms]);
     }
 

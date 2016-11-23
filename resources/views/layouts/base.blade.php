@@ -14,7 +14,8 @@
     <div id="wrapper">
         <div class="menu">
             <ul class="nav nav-tabs">
-                <li role="presentation"><a href="{{ action('FormController@index') }}">Review forms</a></li>
+                <li><a href="{{ action('FormController@index') }}">Review forms</a></li>
+                <li><a href="{{ action('FormController@create') }}">Create form</a></li>
             </ul>
         </div>
         <div id="content">
